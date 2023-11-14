@@ -11,7 +11,7 @@ function App() {
             <Navbar/>
             <Hero/>
         </div>
-    <div className="mt-20">
+    <div>
         <About/>
         <Experience />
         <Tech />

@@ -17,7 +17,7 @@ import {
     // starbucks,
     carrent,
     jobit,
-    tripguide,
+    ProyectoCoderhouse,
     threejs,
 } from "../assets";
 
@@ -148,25 +148,25 @@ export const navLinks = [
 
     const projects = [
     {
-    name: "Trip Guide",
+    name: "E-Commerce",
     description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A sample of a Coderhouse Ecommerce using JS, HTML and CSS.",
     tags: [
         {
-        name: "nextjs",
-        color: "blue-text-gradient",
-        },
-        {
-        name: "supabase",
+        name: "JS",
         color: "green-text-gradient",
         },
         {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "HTML",
+        color: "orange-text-gradient",
+        },
+        {
+        name: "CSS",
+        color: "blue-text-gradient",
         },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: ProyectoCoderhouse,
+    source_code_link: "https://github.com/FranciscoManuelDiego/CoderHouseJavaScript.git",
     },
 ];
 
