@@ -49,7 +49,7 @@ const About = () => {
         and Three.js. Let&apos;s work together to give life
         to your ideas!
       </motion.p>
-      <div className='mt-10 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) =>(
           <ServiceCard key={service.title} index={index} {...service}/>
         ))}
