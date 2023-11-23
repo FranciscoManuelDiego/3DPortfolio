@@ -5,6 +5,10 @@ import {styles} from "../styles"
 import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
+
+// bxk8HJ4vTG4bNnoCN Public Key
+// template_evvm3df This is the emailjs id
+// service_x8nwbns This is the service id
 const Contact = () => {
   const formRef = useRef()
 
@@ -17,9 +21,36 @@ const Contact = () => {
 const [loading , setLoading] = useState(false)
 
 // This will handle the way our form will work
-const handleChange = (e) =>{}
+const handleChange = (e) =>{
+  const { name, value } = e.target;
+  setForm({...form , [name]: value})
+}
 
-const handleSubmit = (e) => {}
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setLoading(true);
+  emailjs.send("service_x8nwbns",
+  "template_evvm3df",
+  {
+    from_name: form.name,
+    to_name: "Francisco",
+    to_email: "franddiego@gmail.com",
+    message: form.message
+  },
+  "bxk8HJ4vTG4bNnoCN").then(() => {
+    setLoading(false)
+    alert("Thanks for sending the message! I'll get back to you as soon as possible")
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    })
+  }, (error) =>{
+    setLoading(false)
+    console.log(error)
+    alert("Something went wrong")
+  })
+}
 
   return (
     <div className="xl:mt-8 xl:flex-row flex-col-reverse flex gap-10
@@ -53,7 +84,7 @@ const handleSubmit = (e) => {}
             <span className="text-slate-50
             font-medium mb-4 mt-4">Your Email</span>
             <input type="text"
-            name="name"
+            name="email"
             value={form.email}
             onChange={handleChange}
             placeholder="Enter your Email"
