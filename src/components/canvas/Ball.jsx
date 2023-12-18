@@ -18,7 +18,7 @@ const Ball = (props) => {
     // You can adjust this logic based on your specific requirements
     const calculateScale = () => {
       // For example, you might want to reduce the scale for smaller screens
-      const newScale = viewport.width < 500 ? 2.4 : 2.85;
+      const newScale = viewport.width < 500 ? 2.5 : 2.85;
       setScale(newScale);
     };
 
@@ -46,8 +46,8 @@ const Ball = (props) => {
         <icosahedronGeometry args={[1, 1, 2]}/>
         <meshStandardMaterial
         color= "#f5f2ed"
-        polygonOffset={false}
-        polygonOffsetFactor={0}
+        polygonOffset
+        polygonOffsetFactor={-1}
         />
         <Decal
         position={[0, 0, 1]}
@@ -64,10 +64,9 @@ const BallCanvas = ({ icon }) => {
     <Canvas
     frameloop="demand"
     gl={{preserveDrawingBuffer: true}}
-    camera={{ near: 0.1, far: 1000, position: [0, 0, 5] }}
     >
       <Suspense fallback= {<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        {/* <OrbitControls enableZoom={false} /> */}
         <Ball imgUrl={icon}></Ball>
       </Suspense>
       <Preload all/>
