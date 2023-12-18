@@ -39,11 +39,11 @@ const Ball = (props) => {
   }, [viewport.width]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <Float speed={1.75} rotationIntensity={1} floatIntensity={0}>
       <ambientLight intensity={0.35}/>
       <directionalLight position={[0, 0, 0.3]}/>
       <mesh castShadow receiveShadow scale={scale}>
-        <icosahedronGeometry args={[1, 1]}/>
+        <icosahedronGeometry args={[1, 1, 2]}/>
         <meshStandardMaterial
         color= "#f5f2ed"
         polygonOffset={false}
@@ -64,6 +64,7 @@ const BallCanvas = ({ icon }) => {
     <Canvas
     frameloop="demand"
     gl={{preserveDrawingBuffer: true}}
+    camera={{ near: 0.1, far: 1000, position: [0, 0, 5] }}
     >
       <Suspense fallback= {<CanvasLoader />}>
         <OrbitControls enableZoom={false} />

@@ -7,7 +7,7 @@ const Tech = () => {
     justify-center gap-8">
       {technologies.map((technolgy)=> (
         <div key={technolgy.name}
-        className="lg:w-28 lg:h-28 md:w-24 md:h-24">
+        className="lg:w-24 lg:h-24 md:w-20 md:h-20">
           <BallCanvas icon={technolgy.icon}/>
         </div>
       ))}
