@@ -23,7 +23,7 @@ const Hero = () => {
             </p>
         </div>
       </div>
-      <ComputersCanvas/>
+      {/* <ComputersCanvas/> */}
       <div className="absolute xl:mb-40 sm:mb-10 
       w-full flex justify-center
       items-center">
