@@ -24,6 +24,7 @@ const Hero = () => {
         </div>
       </div>
       {/* <ComputersCanvas/> */}
+      <span> A model should go here.</span>
       <div className="absolute xl:mb-40 sm:mb-10 
       w-full flex justify-center
       items-center">

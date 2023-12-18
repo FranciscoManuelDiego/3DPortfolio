@@ -1,5 +1,6 @@
 import { Suspense } from "react"
-import { Canvas } from "@react-three/fiber"
+import { useState, useEffect } from 'react';
+import { Canvas, useThree} from "@react-three/fiber"
 import {
   Decal, Float, OrbitControls, Preload, useTexture
 } from "@react-three/drei"
@@ -8,16 +9,45 @@ import CanvasLoader from "../Loader"
 // Using ThreeJS and Fiber to create the 3d ball
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]) //Using a texture to load elements
+
+// Using a hook to resize the 3D Balls
+  const { viewport } = useThree();
+  const [scale, setScale] = useState(2.85);
+
+  useEffect(() => {
+    // You can adjust this logic based on your specific requirements
+    const calculateScale = () => {
+      // For example, you might want to reduce the scale for smaller screens
+      const newScale = viewport.width < 500 ? 2.4 : 2.85;
+      setScale(newScale);
+    };
+
+    // Initial calculation
+    calculateScale();
+
+    // Update scale when the window is resized
+    const handleResize = () => {
+      calculateScale();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [viewport.width]);
+
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.35}/>
       <directionalLight position={[0, 0, 0.3]}/>
-      <mesh castShadow receiveShadow scale={2.85}>
+      <mesh castShadow receiveShadow scale={scale}>
         <icosahedronGeometry args={[1, 1]}/>
         <meshStandardMaterial
         color= "#f5f2ed"
-        polygonOffset
-        polygonOffsetFactor={-1}
+        polygonOffset={false}
+        polygonOffsetFactor={0}
         />
         <Decal
         position={[0, 0, 1]}
