@@ -29,6 +29,7 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import ProyectoCoderhouse from "./ProyectoCoderhouse.png";
+import Annotations from "./Annotations.png";
 
 export {
   logo,
@@ -59,4 +60,5 @@ export {
   carrent,
   jobit,
   ProyectoCoderhouse,
+  Annotations,
 };

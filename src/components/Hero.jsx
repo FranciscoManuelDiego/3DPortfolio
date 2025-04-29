@@ -17,14 +17,12 @@ const Hero = () => {
         </div>
         <div>
           <h1 className= {`${styles.heroHeadText} text-slate-50`}> Hi, I&apos;m <span className="text-LogoColor">
-            Francisco</span></h1>
+            Francisco,</span></h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               Web applications and Interface Developer
             </p>
         </div>
       </div>
-      {/* <ComputersCanvas/> */}
-      <span> A model should go here.</span>
       <div className="absolute xl:mb-40 sm:mb-10 
       w-full flex justify-center
       items-center">
@@ -42,7 +40,6 @@ const Hero = () => {
               }}
               className="w-3 h-3 rounded-full
               bg-secondary mb-1">
-              
             </motion.div>
           </div>
         </a>

@@ -46,7 +46,8 @@ const About = () => {
       >
         I&apos;m a software developer with experience in
         Javescript and its frameworks like React, Node.js
-        and Three.js. Let&apos;s work together to give life
+        and Three.js. Also I included languages like python.
+         Let&apos;s work together to give life
         to your ideas!
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
