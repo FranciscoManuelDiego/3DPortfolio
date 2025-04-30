@@ -12,6 +12,9 @@ module.exports = {
         "black-200": "#090325",
         "white-100": "#f3f3f3",
         LogoColor: "#7834fc",
+        'blue-text-gradient': 'linear-gradient(to right, #1e3a8a, #3b82f6)',
+        'orange-text-gradient': 'linear-gradient(to right, #f97316, #f59e0b)',
+        'yellow-text-gradient': 'linear-gradient(to right, #facc15, #eab308)',
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

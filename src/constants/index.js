@@ -130,7 +130,7 @@ export const navLinks = [
     tags: [
         {
         name: "JS",
-        color: "green-text-gradient",
+        color: "text-yellow-300",
         },
         {
         name: "HTML",
@@ -160,6 +160,10 @@ export const navLinks = [
             {
             name: "CSS",
             color: "blue-text-gradient",
+            },
+            {
+            name: "JS",
+            color: "text-yellow-300",
             },
         ],
         image: Annotations,

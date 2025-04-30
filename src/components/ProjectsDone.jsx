@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants"
 import {fadeIn, textVariant} from "../utils/motion"
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_Link}) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link}) => {
   return(
     <motion.div variants={fadeIn("left", "spring",
     index * 0.5, 0.75)} >
@@ -16,20 +16,17 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_Link})
           scale: 1, 
           speed: 420
         }} 
-        className= "bg-tertiary p-5 rounded-2xl sm:w[300px] lg:w-2/4 md:w-3/4">
-        <div className="relative w-full h-[230px]">
+        className= "bg-tertiary p-10 rounded-2xl w-full md:w-[400px] lg:w-[500px]">
+        <div className="relative w-full h-[300px]">
           <img 
             src={image} 
             alt={name}
-            className=" h-full object-contain rounded-2xl"/>
-            <div className="absolute inset-0 flex justify-end m-3 img_hover">
+            className="h-full w-full object-cover rounded-2xl"/>
+            <div className="absolute bottom-0 left-0  flex justify-end m-1 img_hover">
               <div
-              onClick={() => {
-                window.open(source_code_Link, "_blank")
-              }}
               className="black-gradient w-10 h-10
               rounded-full flex justify-center
-              items-center cursor pointer">
+              items-center cursor-pointer">
                 <img src={github}
                   alt={github}
                   className="w-10 h-10
@@ -39,7 +36,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_Link})
             </div>
         </div> 
         {/* Description of the project goes here */}
-        <div className="mt-5 ">
+        <div className="mt-5">
             <h3 className="text-slate-50 font-bold
             text-[24px]">{name}</h3>
             <p className="mt-2 text-secondary
@@ -53,6 +50,14 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_Link})
               </p>
             ))}
         </div>
+          <button 
+            onClick={() => {
+            window.open(source_code_link)
+            }}
+            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white 
+            font-bold py-2 px-4 rounded-full">
+            Go to Repo
+          </button>
         </Tilt>
     </motion.div>
   )
@@ -76,7 +81,7 @@ const ProjectsDone = () => {
         each project shows my abilities with different technologies.
         </motion.p>
       </div>
-      <div className="mt-20 flex-wrap gap-7">
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((project, index) => (
           <ProjectCard key ={`project-${index}`}
           index={index}
