@@ -5,7 +5,7 @@ Tech, ProjectsDone, StarsCanvas } from "./components"
 function App() {
     return (
     <BrowserRouter>
-    <div className="relative bg-primary">
+    <div className="w-full relative bg-primary">
         <div className="bg-hero-pattern bg-cover
         bg-no-repeat bg-center">
             <Navbar/>

@@ -4,8 +4,8 @@ import { ComputersCanvas } from './canvas'
 
 const Hero = () => {
   return (
-    <section className="realtive w-full h-screen m-auto ">
-      <div className={`${styles.paddingX} absolute
+    <section className="w-full min-h-screen m-auto ">
+      <div className={`${styles.paddingX} relative
       inset-0 top-[120px] max-w-7x1 mx-auto flex
       flex-row items-start gap-5`}>
         <div className="flex flex-col

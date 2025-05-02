@@ -19,6 +19,7 @@ const Contact = () => {
 })
 
 const [loading , setLoading] = useState(false)
+const [cooldown , setCooldown] = useState(false)
 
 // This will handle the way our form will work
 const handleChange = (e) =>{
@@ -27,9 +28,17 @@ const handleChange = (e) =>{
 }
 
 const handleSubmit = (e) => {
+  // This will prevent the default behavior of the form to reset
   e.preventDefault();
+  
+  //This checks if the states turns true, if so, it will not allow the user to send another message until the cooldown is over
+  if(cooldown){
+    alert("Please wait 30 seconds before sending another message.");
+    return;
+  }
+
   setLoading(true);
-  emailjs.send("service_x8nwbns",
+  emailjs.send("service_fzx7u38",
   "template_evvm3df",
   {
     from_name: form.name,
@@ -37,23 +46,29 @@ const handleSubmit = (e) => {
     to_email: "franddiego@gmail.com",
     message: form.message
   },
-  "bxk8HJ4vTG4bNnoCN").then(() => {
-    setLoading(false)
-    alert("Thanks for sending the message! I'll get back to you as soon as possible")
+  "bxk8HJ4vTG4bNnoCN")
+  .then(() => {
+    setLoading(false);
+    alert("Thanks for sending the message! I'll respond as soon as possible.");
     setForm({
       name: "",
       email: "",
       message: "",
-    })
-  }, (error) =>{
-    setLoading(false)
-    console.log(error)
-    alert("Something went wrong")
+    });
+
+    // Set cooldown to true and reset it after 30 seconds
+    setCooldown(true);
+    setTimeout(() => setCooldown(false), 30000); // 30 seconds cooldown
   })
+  .catch((error) => {
+    setLoading(false);
+    console.log(error);
+    alert("Something went wrong");
+  });
 }
 
   return (
-    <div className="xl:mt-8 xl:flex-row flex-col-reverse flex gap-10
+    <div className="xl:mt-8 xl:flex-row flex-col-reverse flex gap-5
     overflow-hidden">
       <motion.div
       variants={slideIn('left', 'tween', 0.2, 1)}
@@ -122,7 +137,7 @@ const handleSubmit = (e) => {
       <motion.div
       variants={slideIn('right', 'tween', 0.2, 1)}
       className="xl:flex-1 xl:h-auto
-      md:h-[550px] h-[450px]">
+      md:h-[350px] h-[250px]">
         <EarthCanvas/>
       </motion.div>
     </div>
