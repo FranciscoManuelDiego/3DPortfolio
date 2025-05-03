@@ -9,7 +9,7 @@ const Hero = () => {
       <div className={`${styles.paddingX} relative
       top-[130px] mx-auto flex
       flex-row items-start gap-2`}>
-        <div className="flex flex-col 2
+        <div className="flex flex-col 2 md:flex-inline-block
         justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-LogoColor"/>
           <div className="w-1 sm:h-80 h-40
@@ -23,7 +23,7 @@ const Hero = () => {
                 Web applications and Interface Developer
               </p>
         </div>
-        <div className=" lg:h-[600px] lg:w-[600px] ">
+        <div className=" lg:h-[600px] lg:w-[600px] md:h-[500px] md:w-[500px] sm:h-[400px] sm:w-[400px] h-[300px] w-[300px]">
           <img
             src={ProgrammerDrawing}
             alt="Programmer Drawing"
@@ -35,7 +35,7 @@ const Hero = () => {
       items-center xs:mt-40">
         <ComputersCanvas/>
       </div>*/}
-      <div className="relative xl:mt-[80px] md:mt-[120px] sm:mt-[120px] mt-[120px] w-full
+      <div className="relative xl:mt-[20px] md:mt-[120px] sm:mt-[120px] mt-[120px] w-full
       w-full flex justify-center
       items-center">
         <a href="#about">
