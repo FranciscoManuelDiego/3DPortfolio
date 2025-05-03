@@ -35,11 +35,11 @@ const Hero = () => {
       items-center xs:mt-40">
         <ComputersCanvas/>
       </div>*/}
-      <div className="relative xl:mb-20 sm:mb-10 mt-10 
+      <div className="relative xl:mt-[80px] md:mt-[120px] sm:mt-[120px] mt-[120px] w-full
       w-full flex justify-center
       items-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px]
+          <div className="absolute w-[35px] h-[64px]
           rounded-3xl border-4 border-secondary
           flex justify-center items-start p-2">
             <motion.div animate={{
