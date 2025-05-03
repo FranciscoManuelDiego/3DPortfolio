@@ -12,10 +12,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
     <motion.div variants={fadeIn("left", "spring",
     index * 0.5, 0.75)}
     >
-      
       <Tilt
         options={{
-          max: 45,
+          max: 0,
           scale: 1, 
           speed: 420
         }} 
@@ -29,7 +28,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
               <div
               className="black-gradient w-10 h-10
               rounded-full flex justify-center
-              items-center cursor-pointer">
+              items-center">
                 <img src={github}
                   alt={github}
                   className="w-10 h-10

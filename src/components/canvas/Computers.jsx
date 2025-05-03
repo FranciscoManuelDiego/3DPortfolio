@@ -12,9 +12,9 @@ const Computers = (isMobile) => {
       groundColor="black"/>
       <pointLight intensity={2} />
       <primitive object={computer.scene} 
-      scale={isMobile ? 0.9 :  1.25}
-      position= {isMobile ? [0.50, -3.70, 2.0] : [1, -4, 2.50]}
-      rotation= {[-0.01, -0.2, -0.1]}
+
+  scale={isMobile ? [4, 4, 4] : [3.25, 3.25, 3.25]} // Adjust scale for all axes
+  position={isMobile ? [-2, -2, 0] : [0, -3.25, 0]} // Adjust position for X, Y, Z
       />
     </mesh>
   )
@@ -43,14 +43,16 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
+    className="w-full h-full"
     frameloop="demand"
     shadows
-    camera = {{position: [20, 3, 5], fov: 35}}
+    camera = {{position: [20, 3, 5], fov: 30}}
     gl={{preserveDrawingBuffer: true}}
     >
       <Suspense fallback= {<CanvasLoader />}>
         <OrbitControls 
         enableZoom={false}
+        enableRotate={false}
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         />
