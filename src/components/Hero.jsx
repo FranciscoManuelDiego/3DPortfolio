@@ -6,17 +6,18 @@ import ProgrammerDrawing from "../assets/ProgrammerDrawing.webp"
 const Hero = () => {
   return (
     <section className="w-full m-auto ">
-      <div className={`${styles.paddingX} relative
+      <div className={`${styles.paddingX}
+      relative
       top-[130px] mx-auto flex
-      flex-row items-start gap-2`}>
-        <div className="flex flex-col 2 md:flex-inline-block
+      flex-cik items-start gap-2`}>
+        <div className="flex flex-col  md:flex-inline-block
         justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-LogoColor"/>
           <div className="w-1 sm:h-80 h-40
           violet-gradient"/>
           {/* This is rendering a little circle plus line format */}
         </div>
-        <div className="flex-1">
+        <div >
           <h1 className= {`${styles.heroHeadText} text-slate-50`}> Hi, I&apos;m <span className="text-LogoColor">
             Francisco,</span></h1>
               <p className={`${styles.heroSubText} mt-2 text-white-100`}>
