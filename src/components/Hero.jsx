@@ -23,11 +23,11 @@ const Hero = () => {
                 Web applications and Interface Developer
               </p>
         </div>
-        <div>
+        <div className=" lg:h-[600px] lg:w-[600px] ">
           <img
             src={ProgrammerDrawing}
             alt="Programmer Drawing"
-            className="object-contain md:h-[400px] md:w-[400px] lg:h-[600px] lg:w-[600px]"
+            className="object-cover w-full h-full"
           />
         </div>
       </div>
