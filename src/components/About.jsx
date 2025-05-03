@@ -45,8 +45,8 @@ const About = () => {
       max-w-3xl laoding-[30px]"
       >
         I&apos;m a software developer with experience in
-        Javescript and its frameworks like React, Node.js
-        and Three.js. Also I included languages like python.
+        Javascript and its frameworks like React, Node.js
+        and Three.js. Also I included languages like Python.
          Let&apos;s work together to give life
         to your ideas!
       </motion.p>

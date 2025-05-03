@@ -1,33 +1,41 @@
 import { motion } from "framer-motion"
 import { styles } from "../styles"
-import { ComputersCanvas } from './canvas'
+import ProgrammerDrawing from "../assets/ProgrammerDrawing.webp"
+// import { ComputersCanvas } from './canvas'
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-screen m-auto ">
+    <section className="w-full m-auto ">
       <div className={`${styles.paddingX} relative
-      inset-0 top-[120px] max-w-7x1 mx-auto flex
-      flex-row items-start gap-5`}>
-        <div className="flex flex-col
+      top-[130px] mx-auto flex
+      flex-row items-start gap-2`}>
+        <div className="flex flex-col 2
         justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-LogoColor"/>
           <div className="w-1 sm:h-80 h-40
           violet-gradient"/>
           {/* This is rendering a little circle plus line format */}
         </div>
-        <div>
+        <div className="flex-1">
           <h1 className= {`${styles.heroHeadText} text-slate-50`}> Hi, I&apos;m <span className="text-LogoColor">
             Francisco,</span></h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              Web applications and Interface Developer
-            </p>
+              <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+                Web applications and Interface Developer
+              </p>
+        </div>
+        <div>
+          <img
+            src={ProgrammerDrawing}
+            alt="Programmer Drawing"
+            className="object-contain md:h-[400px] md:w-[400px] lg:h-[600px] lg:w-[600px]"
+          />
         </div>
       </div>
       {/*<div className="mt-20 flex justify-center
       items-center xs:mt-40">
         <ComputersCanvas/>
       </div>*/}
-      <div className="absolute xl:mb-40 sm:mb-10 
+      <div className="relative xl:mb-20 sm:mb-10 mt-10 
       w-full flex justify-center
       items-center">
         <a href="#about">
