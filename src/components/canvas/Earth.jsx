@@ -8,7 +8,7 @@ const Earth = () => {
   return (
     <primitive
       object={earth.scene}
-      scale={2.8}
+      scale={2.7}
     />
   )
 }
@@ -17,21 +17,25 @@ const EarthCanvas = () => {
   return (
     <Canvas
     shadows
-    frameLoop='demand'
+    frameloop='demand'
     gl={{ presrveDrawingBuffer: true}}
     camera={{ 
       fov: 45,
       near: 0.1,
       far: 200,
       position: [-5, 3, 6]
-    }}>
+    }}
+    style={{ pointerEvents: "auto" }} // Restrict interaction to the canvas area
+    >
       <Suspense fallback={<CanvasLoader/>}> 
         <OrbitControls
         autoRotate={true}
         enableZoom={false}
         enablePan= {false}
         maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}/>
+        minPolarAngle={Math.PI / 2}
+        />
+        
         <Earth/>
       </Suspense>
     </Canvas>

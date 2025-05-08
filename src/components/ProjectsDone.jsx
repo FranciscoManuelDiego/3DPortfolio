@@ -56,7 +56,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
             onClick={() => {
             window.open(source_code_link)
             }}
-            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white 
+            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white 
             font-bold py-2 px-4 rounded-full">
             Go to Repo
           </button>
