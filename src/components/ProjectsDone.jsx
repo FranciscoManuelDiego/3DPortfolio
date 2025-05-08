@@ -9,8 +9,9 @@ import {fadeIn, textVariant} from "../utils/motion"
 const ProjectCard = ({ index, name, description, tags, image, source_code_link}) => {
   return(
 
-    <motion.div variants={fadeIn("left", "spring",
+    <motion.div variants={fadeIn("spring",
     index * 0.5, 0.75)}
+    className="overflow-hidden"
     >
       <Tilt
         options={{
