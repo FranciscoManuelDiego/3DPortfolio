@@ -25,6 +25,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import ProyectoCoderhouse from "./ProyectoCoderhouse.png";
 import Annotations from "./Annotations.png";
+import TicTacToe from "./TicTacToe.png";
 
 export {
   logo,
@@ -51,5 +52,6 @@ export {
   carrent,
   jobit,
   ProyectoCoderhouse,
+  TicTacToe,
   Annotations,
 };

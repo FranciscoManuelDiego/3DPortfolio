@@ -137,7 +137,7 @@ const handleSubmit = (e) => {
       <motion.div
       variants={slideIn('right', 'tween', 0.2, 1)}
       className="xl:flex-1 xl:h-auto
-      h-[450px] h-[450px] md:w-[340px] w-[340px]
+      h-[450px] md:w-[340px] w-[340px]
       ">
         <EarthCanvas/>
       </motion.div>

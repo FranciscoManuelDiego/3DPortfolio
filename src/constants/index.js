@@ -18,6 +18,7 @@ import {
     carrent,
     jobit,
     ProyectoCoderhouse,
+    TicTacToe,
     Annotations,
     threejs,
 } from "../assets";
@@ -162,6 +163,32 @@ export const navLinks = [
         image: Annotations,
         source_code_link: "https://github.com/FranciscoManuelDiego/PersonalNotes.git",
         },
+           {
+    name: "Game Tic-Tac-Toe",
+    description:
+        "Tic-tac-toe game made with React, HTML and CSS.",
+    tags: [
+        {
+        name: "React",
+        color: "blue-text-gradient",
+        },
+        {
+        name: "JS",
+        color: "text-yellow-300",
+        },
+        {
+        name: "HTML",
+        color: "orange-text-gradient",
+        },
+        {
+        name: "CSS",
+        color: "blue-text-gradient",
+        },
+    ],
+    image: TicTacToe,
+    source_code_link: "https://github.com/FranciscoManuelDiego/TIc-Tac-Toe.git",
+    deploy_link: "https://tic-tac-9kvmuvh6v-franciscomanueldiegos-projects.vercel.app/"
+    },
 ];
 
 export { services, technologies, experiences,  projects };
