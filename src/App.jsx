@@ -12,7 +12,7 @@ function App() {
             <Hero/>
         </div>
             <About/>    
-            <Tech />
+            {/*<Tech /> */}
             <ProjectsDone />
             {/* <Feedbacks /> */}
         <div className="relative z-0">

@@ -36,7 +36,7 @@ const Hero = () => {
       items-center xs:mt-40">
         <ComputersCanvas/>
       </div>*/}
-      <div className="relative xl:mt-[20px] md:mt-[120px] sm:mt-[120px] mt-[120px] w-full
+      <div className="relative xl:mt-[20px] md:mt-[120px] sm:mt-[120px] mt-[120px]
       w-full flex justify-center
       items-center">
         <a href="#about">
