@@ -1,4 +1,5 @@
-import {BallCanvas} from "./canvas"
+// import {BallCanvas} from "./canvas"
+import {Icons} from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { technologies } from "../constants"
 const Tech = () => {
@@ -8,7 +9,7 @@ const Tech = () => {
       {technologies.map((technolgy)=> (
         <div key={technolgy.name}
         className="lg:w-24 lg:h-24 md:w-20 md:h-20">
-          <BallCanvas icon={technolgy.icon}/>
+          <Icons icon={technolgy.icon}/>
         </div>
       ))}
     </div>
