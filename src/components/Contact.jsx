@@ -92,6 +92,7 @@ const handleSubmit = (e) => {
             px-6 placeholder:text-secondary
             text-white rounded-lg outlined-none
             border-noine font-medium"
+            required
             >
             </input>
           </label>
@@ -107,6 +108,7 @@ const handleSubmit = (e) => {
             px-6 placeholder:text-secondary
             text-white rounded-lg outlined-none
             border-noine font-medium"
+            required
             >
             </input>
           </label>
@@ -122,7 +124,8 @@ const handleSubmit = (e) => {
             className="bg-tertiary py-4
             px-6 placeholder:text-secondary
             text-white rounded-lg outlined-none
-            border-noine font-medium">
+            border-noine font-medium"
+            required>
             </textarea>
           </label>
           <button type="submit"
