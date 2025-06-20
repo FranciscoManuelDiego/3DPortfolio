@@ -20,6 +20,7 @@ const Contact = () => {
 
 const [loading , setLoading] = useState(false)
 const [cooldown , setCooldown] = useState(false)
+const [isRequired, setIsRequired] = useState(false);
 
 // This will handle the way our form will work
 const handleChange = (e) =>{
@@ -30,6 +31,10 @@ const handleChange = (e) =>{
 const handleSubmit = (e) => {
   // This will prevent the default behavior of the form to reset
   e.preventDefault();
+   if (!form.name || !form.email || !form.message) { //Check if any field is empty
+    setIsRequired(true);
+    return;
+  }
   
   //This checks if the states turns true, if so, it will not allow the user to send another message until the cooldown is over
   if(cooldown){
@@ -92,9 +97,10 @@ const handleSubmit = (e) => {
             px-6 placeholder:text-secondary
             text-white rounded-lg outlined-none
             border-noine font-medium"
-            required
-            >
-            </input>
+            />
+            {isRequired && !form.name && (
+            <span className="text-red-500 text-xs mt-1">* Name required</span>
+          )}
           </label>
           <label className="flex flex-col">
             <span className="text-slate-50
@@ -108,9 +114,11 @@ const handleSubmit = (e) => {
             px-6 placeholder:text-secondary
             text-white rounded-lg outlined-none
             border-noine font-medium"
-            required
-            >
-            </input>
+            required={isRequired}
+            />
+            {isRequired && !form.email && (
+            <span className="text-red-500 text-xs mt-1">* Email required</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-slate-50
@@ -125,8 +133,11 @@ const handleSubmit = (e) => {
             px-6 placeholder:text-secondary
             text-white rounded-lg outlined-none
             border-noine font-medium"
-            required>
-            </textarea>
+            required={isRequired}
+            />
+            {isRequired && !form.message && (
+            <span className="text-red-500 text-xs mt-1">* Message required</span>
+            )}
           </label>
           <button type="submit"
             className="bg-tertiary py-2 px-5 mt-4
