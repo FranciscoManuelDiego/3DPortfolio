@@ -10,7 +10,7 @@ import { slideIn } from "../utils/motion"
 // template_evvm3df This is the emailjs id
 // service_x8nwbns This is the service id
 const Contact = () => {
-  const formRef = useRef()
+  const formRef = useRef();
 
   const[form , setForm] = useState({
     name: "",
@@ -18,8 +18,8 @@ const Contact = () => {
     message: ""
 })
 
-const [loading , setLoading] = useState(false)
-const [cooldown , setCooldown] = useState(false)
+const [loading , setLoading] = useState(false);
+const [cooldown , setCooldown] = useState(false);
 const [isRequired, setIsRequired] = useState(false);
 
 // This will handle the way our form will work
@@ -150,9 +150,9 @@ const handleSubmit = (e) => {
       </motion.div>
       <motion.div
       variants={slideIn('right', 'tween', 0.2, 1)}
-      className="xl:flex-1 xl:h-auto
-      h-[450px] md:w-[340px] w-[340px]
-      ">
+      className="xl:flex-1 xl:h-[750px]
+      h-[430px] w-[340px] md:w-[340px] 
+       flex shrink-0 ">
         <EarthCanvas/>
       </motion.div>
     </div>

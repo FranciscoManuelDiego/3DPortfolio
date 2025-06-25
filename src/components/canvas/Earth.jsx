@@ -8,7 +8,7 @@ const Earth = () => {
   return (
     <primitive
       object={earth.scene}
-      scale={2.7}
+      scale={2.5}
     />
   )
 }
