@@ -20,6 +20,7 @@ import {
     ProyectoCoderhouse,
     TicTacToe,
     Annotations,
+    QuizApp,
     threejs,
 } from "../assets";
 
@@ -188,6 +189,32 @@ export const navLinks = [
     image: TicTacToe,
     source_code_link: "https://github.com/FranciscoManuelDiego/TIc-Tac-Toe.git",
     deploy_link: "https://tic-tac-9kvmuvh6v-franciscomanueldiegos-projects.vercel.app/"
+    },
+    {
+    name: "Quiz App",
+    description:
+        " History Quiz App made with React, HTML and CSS.",
+    tags: [
+        {
+        name: "React",
+        color: "blue-text-gradient",
+        },
+        {
+        name: "JS",
+        color: "text-yellow-300",
+        },
+        {
+        name: "HTML",
+        color: "orange-text-gradient",
+        },
+        {
+        name: "CSS",
+        color: "blue-text-gradient",
+        },
+    ],
+    image: QuizApp,
+    source_code_link: "https://github.com/FranciscoManuelDiego/QuizApp.git",
+    deploy_link: "https://quiz-app-sepia-alpha.vercel.app/"
     },
 ];
 

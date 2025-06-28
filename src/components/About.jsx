@@ -56,8 +56,9 @@ const About = () => {
           to your projects.
           <Tech />
         </motion.p>
-        <ProfileCard className="md:w-1/3 w-full"
-          name="DiegoFrancisco"
+        
+        <ProfileCard className="md:w-1/3 flex justify-center w-full "
+          name="Diego  Francisco"
           title="Software Developer"
           handle="Diego Francisco"
           contactText="Contact Me"
@@ -66,7 +67,7 @@ const About = () => {
           innerGradient={false}
           behindGradient={false}
           enableTilt={false}
-          onContactClick={() => console.log('Contact clicked')}
+          onContactClick={() => window.open("https://www.linkedin.com/in/francisco-diego-8ba61b194/")}
         />
       </div>
     </div>

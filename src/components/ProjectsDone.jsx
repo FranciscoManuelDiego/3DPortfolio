@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants"
 import {fadeIn, textVariant} from "../utils/motion"
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link}) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, deploy_link}) => {
   return(
 
     <motion.div variants={fadeIn("spring",
@@ -53,6 +53,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
               </p>
             ))}
         </div>
+        <div className="mt-2 flex justify-between">
           <button 
             onClick={() => {
             window.open(source_code_link)
@@ -61,6 +62,17 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
             font-bold py-2 px-4 rounded-full">
             Go to Repo
           </button>
+          {deploy_link &&
+          <button 
+            onClick={() => {
+            window.open(deploy_link)
+            }}
+            className="mt-2 bg-green-500 hover:bg-green-700 text-white 
+            font-bold py-2 px-4 rounded-full">
+            Go to Web
+          </button>
+          }
+        </div>
         </Tilt>
     </motion.div>
   )

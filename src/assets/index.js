@@ -26,6 +26,7 @@ import jobit from "./jobit.png";
 import ProyectoCoderhouse from "./ProyectoCoderhouse.png";
 import Annotations from "./Annotations.png";
 import TicTacToe from "./TicTacToe.png";
+import QuizApp from "./QuizApp.png";
 
 export {
   logo,
@@ -54,4 +55,5 @@ export {
   ProyectoCoderhouse,
   TicTacToe,
   Annotations,
+  QuizApp
 };
