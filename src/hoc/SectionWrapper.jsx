@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { styles } from "../styles"
 import { staggerContainer } from "../utils/motion"
-// Section Wrapper wroks as a high order animation loader
+// Section Wrapper works as a high order animation loader
 const SectionWrapper = (Component , idName) => 
 function HOC(){
     return (
